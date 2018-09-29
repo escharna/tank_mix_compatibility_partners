@@ -10,6 +10,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= render partial: 'shared/navigation' %>
+      <div class="row pl-5 pr-5">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
