@@ -23,7 +23,7 @@
         <%- @experiments.each do |experiment| %>
           <tr>
             <td><%= experiment.name %></td>
-            <td><%= experiment.requester.email %></td>
+            <td><%= experiment.requester.full_name %></td>
           </tr>
         <%- end %>
       </tbody>

@@ -9,12 +9,15 @@
         <li class="nav-item">
           <a class="nav-link" href="/experiments">Experiments</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" data-method="delete" href="/users/sign_out" rel="nofollow">
-            Sign Out
-          </a>
-        </li>
       <%- end %>
     </ul>
   </div>
+  <%- if user_signed_in? %>
+    <span class="navbar-text">
+      Welcome, <%= current_user.full_name %> |
+      <a data-method="delete" href="/users/sign_out" rel="nofollow">
+        Sign Out
+      </a>
+    </span>
+  <%- end %>
 </nav>
