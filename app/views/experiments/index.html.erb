@@ -1,0 +1,32 @@
+<div class='row pl-2 pr-2'>
+  <div class='col'>
+    <h3>Experiments</h3>
+  </div>
+  <div class='col text-right'>
+    <span class='align-bottom'>
+      <a href="/experiments/new">
+        New Experiment
+      </a>
+    </span>
+  </div>
+</div>
+<div class='row'>
+  <div class='col'>
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th>Name</th>
+          <th>Requested By</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%- @experiments.each do |experiment| %>
+          <tr>
+            <td><%= experiment.name %></td>
+            <td><%= experiment.requester.email %></td>
+          </tr>
+        <%- end %>
+      </tbody>
+    </table>
+  </div>
+</div>

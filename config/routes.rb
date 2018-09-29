@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   resources :users
 
   authenticated :user do
-    root 'users#index', as: :authenticated_root
+    root 'experiments#index', as: :authenticated_root
   end
 
   resources :static_pages
   root to: 'static_pages#home'
+
+  resources :experiments
 end
